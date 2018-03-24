@@ -17,6 +17,13 @@ namespace PugApp.Controllers
 		
 		}
 
+		public ActionResult Details(int? ID)
+		{
+			var studentDetail = db.Students.SingleOrDefault(r => r.ID == ID);
+
+			return View(studentDetail);
+		}
+
 		public ActionResult Edit(int? id)
 		{
 			return View("");

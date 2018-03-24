@@ -1,0 +1,54 @@
+﻿@model PugApp.Models.Student
+
+
+@{
+	ViewBag.Title = "Detail";
+}
+
+<h2>DetailS</h2>
+
+
+@{
+	ViewBag.Title = "Details";
+}
+
+
+<table class="table table-striped table-hover table-responsive">
+	<thead>
+		<tr>
+			
+			<th>
+				@Html.DisplayNameFor(model => model.LastName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.FirstMidName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.EnrollmentDate)
+			</th>
+			
+			<th></th>
+		</tr>
+	</thead>
+	<tr>
+		
+		<td>
+			@Html.DisplayFor(model => model.LastName)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.FirstMidName)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.EnrollmentDate)
+		</td>
+		
+		
+		@*<td>
+				@Html.ActionLink("Edit", "Edit", new { id = Model.BeerId }) ||
+				@Html.ActionLink("Delete", "Delete", new { id = Model.BeerId })
+			</td>*@
+	</tr>
+</table>
+
+@Html.ActionLink("Back to List", "Index")
+
