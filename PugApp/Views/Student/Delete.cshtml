@@ -1,7 +1,14 @@
-﻿
+﻿@model PugApp.Models.Student
 @{
     ViewBag.Title = "Delete";
 }
 
 <h2>Delete</h2>
 
+<p>Are you sure you really want to delete this student?</p>
+
+@using (Html.BeginForm())
+{
+	@Html.HiddenFor(s => s.ID)
+	<button type="submit">Delete</button>
+}

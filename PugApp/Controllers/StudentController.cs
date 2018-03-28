@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PugApp.DAL;
@@ -26,26 +27,55 @@ namespace PugApp.Controllers
 
 		public ActionResult Edit(int? id)
 		{
-			return View("");
+			if (id == null)
+			{
+				return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+			}
+
+			var Student = this.db.Students.SingleOrDefault(s => s.ID == id);
+			return View(Student);
 		}
 
 		[HttpPost]
 		public ActionResult Edit(Student student)
 		{
-			return RedirectToAction("Index");
+			if (ModelState.IsValid)
+			{
+				student.EnrollmentDate = DateTime.Now;
+				this.db.Entry(student).State = System.Data.Entity.EntityState.Modified;
+				this.db.SaveChanges();
+
+			}
+
+			//var Student = this.db.Students.SingleOrDefault(s => s.ID == student.ID);
+			//Student.LastName = student.LastName;
+			//Student.FirstMidName = student.FirstMidName;
+			//this.db.SaveChanges();
+
+			return this.RedirectToAction("Index");
 		}
 
 
 		public ActionResult Delete(int? id)
 		{
-			return View();
+			if (id == null)
+			{
+				return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+			}
+
+			var Student = this.db.Students.SingleOrDefault(s => s.ID == id);
+			return View(Student);
 		}
 
 
 		[HttpPost]
 		[ActionName("Delete")]
-		public ActionResult DeletePost(int? id)
+		public ActionResult DeletePost(Student student)
 		{
+			this.db.Entry(student).State = System.Data.Entity.EntityState.Deleted;
+			this.db.SaveChanges();
+
+
 			return RedirectToAction("Index");
 
 		}
