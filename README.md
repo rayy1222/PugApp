@@ -9,5 +9,5 @@ A number of required dependencies will be automatically downloaded by NuGet when
 To run this project you will need to do the following:
 
 -Download or clone this repository
--Open Hypermarine.sln in Visual Studio.
+-Open PugApp.sln in Visual Studio.
 -Run the project in your browser of choice.
