@@ -4,7 +4,7 @@
 
 <h2>Students</h2>
 
-<table>
+<table class="table table-striped">
 	<tr>
 		<th>
 			Last Name
@@ -22,13 +22,13 @@
 	{
 		<tr>
 			<td>
-				@Html.DisplayFor(modelItem => item.LastName)
+				@item.LastName
 			</td>
 			<td>
-				@Html.DisplayFor(modelItem => item.FirstMidName)
+				@item.FirstMidName
 			</td>
 			<td>
-				@Html.DisplayFor(modelItem => item.EnrollmentDate)
+				@item.EnrollmentDate.ToShortDateString()
 			</td>
 			<td>
 				@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
