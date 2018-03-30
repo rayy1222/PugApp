@@ -1,7 +1,22 @@
 ﻿
+/*Custom Css*/
+
+
+nav {
+color: blue;
+
+}
+
+
 
 h1, h2 {
 color:aqua;
+}
+
+body {
+background-color: aliceblue;
+border-color: aqua;
+
 }
 
 img {
