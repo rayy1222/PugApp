@@ -1,0 +1,13 @@
+﻿
+
+h1, h2 {
+color:aqua;
+}
+
+img {
+	transform: rotate(90deg);
+}
+
+.lowdiv {
+	padding-bottom: 75px;
+}
