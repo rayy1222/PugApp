@@ -25,6 +25,28 @@ namespace PugApp.Controllers
 			return View(studentDetail);
 		}
 
+		public ActionResult Add()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public ActionResult Add(Student student)
+		{
+			Student dbstudent = new Student();
+			dbstudent.FirstMidName = student.FirstMidName;
+			dbstudent.LastName = student.LastName;
+
+			dbstudent.EnrollmentDate = DateTime.Now;
+			dbstudent.Enrollments = new List<Enrollment>();
+
+			db.Students.Add(dbstudent);
+			db.SaveChanges();
+
+			return RedirectToAction("Index");
+
+		}
+
 		public ActionResult Edit(int? id)
 		{
 			if (id == null)
