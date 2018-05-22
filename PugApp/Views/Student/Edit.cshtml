@@ -5,15 +5,15 @@
 	ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit</h2>  @*Form for Edit Page*@
 
 @using (Html.BeginForm())
 {
 	@Html.HiddenFor(s => s.ID);
-	
+
 	@Html.LabelFor(s => s.LastName, "Last Name");
 	@Html.TextBoxFor(s => s.LastName);
-	
+
 	@Html.LabelFor(s => s.LastName, "First and Middle Names");
 	@Html.TextBoxFor(s => s.FirstMidName);
 
