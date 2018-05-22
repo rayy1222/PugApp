@@ -11,3 +11,4 @@ To run this project you will need to do the following:
 -Download or clone this repository
 -Open PugApp.sln in Visual Studio.
 -Run the project in your browser of choice.
+-If having trouble running Update-Database on users machine after cloning repo
