@@ -1,0 +1,8 @@
+﻿body {
+	/* The image used */
+	padding-top: 250px;
+	background-image: url("../Content/Sad-Pug-Background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

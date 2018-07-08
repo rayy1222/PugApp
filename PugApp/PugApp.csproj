@@ -167,7 +167,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\Custom.css" />
+    <Content Include="Content\IMG_5574.JPG" />
+    <Content Include="Content\IMG_5575.JPG" />
+    <Content Include="Content\pug-happy.jpg" />
+    <Content Include="Content\pug-Sad.jpg" />
+    <Content Include="Content\Sad-Pug-Background.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
