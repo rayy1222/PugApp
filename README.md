@@ -1,6 +1,6 @@
 # PugApp
 
-Code Louisville C# course, an ASP.NET MVC. users can create students to use math application that will be written in JavaScript. The game has not been added due to time constratints. Users can create, delete edit student players in the game. The end result will be a happy Pug or a sad Pug. 
+Code Louisville C# course, an ASP.NET MVC. users can create students to use math application that will be written in JavaScript. The game has not been added yet. Users can click on the buttons installed on the Home page and see expamples of how to isolate variables. Users can add,read, delete, and edit students. Eventually, this application will be used to help students with math by playing a game that isolates variables and the end result will be a happy Pug or a sad Pug if done correctly. 
 
 Installation Guide
 
